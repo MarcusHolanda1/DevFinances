@@ -55,7 +55,8 @@
         <section id="transaction">
             <h2 class="sr-only">Transações</h2>
 
-            <a href="#" class="button new">+ Nova transação</a>
+            <a href="#" onclick="Modal.open()"
+            class="button new">+ Nova transação</a>
 
             <table id="data-table">
                 <thead>
@@ -101,11 +102,9 @@
 
 
 
-
-
     <footer><p>Bora newba</p></footer> 
     
-        <div class="div modal-overlay active">
+        <div class="modal-overlay">
             <div class="modal">
                 <div class="form">
                     <h2>Nova transação</h2>
@@ -127,7 +126,7 @@
                             </div>   
                             
                             <div class="input-group actions">
-                                <a href="#" class="button cancel">Cancelar</a>
+                                <a href="#" class="button cancel" onclick="Modal.close()">Cancelar</a>
                                 <button>Salvar</button>
                             </div>
                             
@@ -135,6 +134,8 @@
                 </div>
             </div>
         </div>
+
+        <script src="./modal.js"></script>
 
 </body>
 
