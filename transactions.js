@@ -1,12 +1,10 @@
 const transactions = [
     {
-        id: 1,
         description: 'Luz',
         amount: -50000,
         date: '23/01/2021',
     },
     {
-        id: 2,
         description: 'Website',
         amount: 500000,
         date: '23/01/2021',
@@ -18,8 +16,7 @@ const transactions = [
         date: '23/01/2021',
     },
     {
-        id: 4,
-        description: 'Website',
+        description: 'App',
         amount: 200000,
         date: '23/01/2021',
     }
@@ -51,6 +48,12 @@ const Transaction = {
     add(transaction){
         Transaction.all.push(transaction)
         
+        App.reload()
+    },
+
+    remove(index){
+        Transaction.all.splice(index, 1)
+
         App.reload()
     },
 
@@ -153,11 +156,5 @@ const App = {
 
 App.init()
 
-Transaction.add({
-    id: 12,
-    description: 'Suav',
-    amount: 200,
-    date: '29/11/2021'
-})
-
+Transaction.remove()
 
