@@ -9,8 +9,3 @@ const Modal = {
     }
 }
 
-const Transaction = {
-    incomes(){
-        
-    }
-}
