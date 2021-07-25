@@ -183,7 +183,7 @@ table td {
 }
 
 table tbody tr{
-    opacity: 0.6;
+    opacity: 0.9;
 }
 
 table tr:hover{
@@ -198,6 +198,10 @@ table tbody tr td:first-child {
 table thead tr th:last-child,
 table tbody tr td:last-child {
     border-radius: 0 0.25rem 0.25rem 0;
+}
+
+table thead th{
+    color: rgb(43, 43, 43);
 }
 
 /** Table classes **/
@@ -216,6 +220,9 @@ td.expense{
 
 
 /*** MODAL ***/
+.modal {
+    border-radius: 0.35rem;
+}
 
 .modal-overlay {
     width: 100%;
