@@ -1,26 +1,37 @@
-const transactions = [
-    {
-        description: 'Luz',
-        amount: -50000,
-        date: '23/01/2021',
+// const transactions = [ *** STOp
+//     {
+//         description: 'Luz',
+//         amount: -50000,
+//         date: '23/01/2021',
+//     },
+//     {
+//         description: 'Website',
+//         amount: 500000,
+//         date: '23/01/2021',
+//     },
+//     {
+//         id: 3,
+//         description: 'Internet',
+//         amount: -20000,
+//         date: '23/01/2021',
+//     },
+//     {
+//         description: 'App',
+//         amount: 200000,
+//         date: '23/01/2021',
+//     }
+// ]
+const Storage = {
+    get(){
+        return JSON.parse(localStorage.getItem('dev.finances:transactions')) || 
+        []
     },
-    {
-        description: 'Website',
-        amount: 500000,
-        date: '23/01/2021',
-    },
-    {
-        id: 3,
-        description: 'Internet',
-        amount: -20000,
-        date: '23/01/2021',
-    },
-    {
-        description: 'App',
-        amount: 200000,
-        date: '23/01/2021',
+
+    set(transactions){
+        localStorage.setItem('dev.finances:transactions', JSON.
+        stringify(transactions))
     }
-]
+}
 
 
 const Utils = {
@@ -57,7 +68,7 @@ const Utils = {
 // assim, eu terei o total
 
 const Transaction = {
-    all: transactions,
+    all: Storage.get(),
     add(transaction){
         Transaction.all.push(transaction)
         
@@ -105,7 +116,7 @@ const Transaction = {
 
 
 const DOM = {
-    transactionsContainer: document.querySelector('#data-table'),
+    transactionsContainer: document.querySelector('#data-table tbody'),
 
 
     addTransaction(transaction, index) {
@@ -215,6 +226,9 @@ const Form = {
     }
 }
 
+
+
+
 /* APlioca;ão */
 
 const App = {
@@ -225,6 +239,8 @@ const App = {
         })
         
         DOM.updateBalance()
+
+        Storage.set(Transaction.all)
 
     },
     reload(){

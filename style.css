@@ -1,6 +1,6 @@
 /*** GLOBAL ***/
 :root{
-    --dark-blue: rgb(90, 20, 202);
+    --dark-blue: rgb(76, 0, 255);
     --green: rgb(52, 170, 58);
 }
 
@@ -184,12 +184,10 @@ table td {
 
 table tbody tr{
     opacity: 0.6;
-    color: black;
 }
 
 table tr:hover{
-    opacity: 0.;
-    color: black;
+    opacity: 0.2;
 }
 
 table thead tr th:first-child,
