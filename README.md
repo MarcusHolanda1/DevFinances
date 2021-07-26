@@ -1,4 +1,4 @@
-# dev.Finance$
+# dev.finance$
 
 ## Com esse projeto o usuário pode se mandar atualizado com os seus gastos, o sistema feito em JavaScript recebe seus dinheiro de entrada, saída e calcula o seu total.
 
